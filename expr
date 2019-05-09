@@ -1,0 +1,192 @@
+student@T18:~$ expr ~12+8~
+~12+8~
+student@T18:~$ expr `12+8`
+12+8: command not found
+expr: missing operand
+Try 'expr --help' for more information.
+student@T18:~$ 
+student@T18:~$ expr `12 + 8`
+12: command not found
+expr: missing operand
+Try 'expr --help' for more information.
+student@T18:~$ expr 12 + 8
+20
+student@T18:~$ expr 12 \* 2
+24
+student@T18:~$ expr 12 \ * 2
+expr: syntax error
+student@T18:~$ expr 12 \* 2
+24
+student@T18:~$ y=10
+student@T18:~$ y=`expr $y + 1`
+student@T18:~$ echo $y
+11
+student@T18:~$ y=20
+student@T18:~$ y=`expr $y + 3`
+student@T18:~$ echo $y
+23
+student@T18:~$ a=24
+student@T18:~$ a=`expr $a + 6'
+> a=`expr $a + 6`
+> ^C
+student@T18:~$ a=24
+student@T18:~$ a=`expr $a + 6`
+student@T18:~$ echo $a
+30
+student@T18:~$ read x
+^C
+student@T18:~$ read x
+^C
+student@T18:~$ read x
+4
+student@T18:~$ read y
+4
+student@T18:~$ sum=`expr $x + $y`
+student@T18:~$ echo $sum
+8
+student@T18:~$ 
+student@T18:~$ echo sum=$sum
+sum=8
+student@T18:~$ echo "Add two numbers"
+Add two numbers
+student@T18:~$ read a
+10 
+student@T18:~$ read b
+20
+student@T18:~$ sum=`expr $a + $b`
+student@T18:~$ sum=$sum
+student@T18:~$ echo "sum=$sum"
+sum=30
+student@T18:~$ man expr
+student@T18:~$ expr --help
+Usage: expr EXPRESSION
+  or:  expr OPTION
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+Print the value of EXPRESSION to standard output.  A blank line below
+separates increasing precedence groups.  EXPRESSION may be:
+
+  ARG1 | ARG2       ARG1 if it is neither null nor 0, otherwise ARG2
+
+  ARG1 & ARG2       ARG1 if neither argument is null or 0, otherwise 0
+
+  ARG1 < ARG2       ARG1 is less than ARG2
+  ARG1 <= ARG2      ARG1 is less than or equal to ARG2
+  ARG1 = ARG2       ARG1 is equal to ARG2
+  ARG1 != ARG2      ARG1 is unequal to ARG2
+  ARG1 >= ARG2      ARG1 is greater than or equal to ARG2
+  ARG1 > ARG2       ARG1 is greater than ARG2
+
+  ARG1 + ARG2       arithmetic sum of ARG1 and ARG2
+  ARG1 - ARG2       arithmetic difference of ARG1 and ARG2
+
+  ARG1 * ARG2       arithmetic product of ARG1 and ARG2
+  ARG1 / ARG2       arithmetic quotient of ARG1 divided by ARG2
+  ARG1 % ARG2       arithmetic remainder of ARG1 divided by ARG2
+
+  STRING : REGEXP   anchored pattern match of REGEXP in STRING
+
+  match STRING REGEXP        same as STRING : REGEXP
+  substr STRING POS LENGTH   substring of STRING, POS counted from 1
+  index STRING CHARS         index in STRING where any CHARS is found, or 0
+  length STRING              length of STRING
+  + TOKEN                    interpret TOKEN as a string, even if it is a
+                               keyword like 'match' or an operator like '/'
+
+  ( EXPRESSION )             value of EXPRESSION
+
+Beware that many operators need to be escaped or quoted for shells.
+Comparisons are arithmetic if both ARGs are numbers, else lexicographical.
+Pattern matches return the string matched between \( and \) or null; if
+\( and \) are not used, they return the number of characters matched or 0.
+
+Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null
+or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/expr>
+or available locally via: info '(coreutils) expr invocation'
+student@T18:~$ y="hello"
+student@T18:~$ length=`expr length $y`
+student@T18:~$ echo length=$length
+length=5
+student@T18:~$ man expr
+student@T18:~$ a=10
+student@T18:~$ b=20
+student@T18:~$ echo `expr $a|$b`
+20: command not found
+
+student@T18:~$ man expr
+student@T18:~$ man expr
+student@T18:~$ a=10
+student@T18:~$ b=20
+student@T18:~$ c=`expr $a>$b` 
+student@T18:~$ echo $c
+
+student@T18:~$ a=10
+student@T18:~$ b=20
+student@T18:~$ product=`expr $a /* $b`
+expr: syntax error
+student@T18:~$ a=10
+student@T18:~$ b=20
+student@T18:~$ product=`expr $a * $b`
+expr: syntax error
+student@T18:~$ product=` expr $a * $b `
+expr: syntax error
+student@T18:~$ read a
+2
+student@T18:~$ read b
+3
+student@T18:~$ product=`expr $a * $b`
+expr: syntax error
+student@T18:~$ product=`expr $a \* $b`
+student@T18:~$ echo "product=$product"
+product=6
+student@T18:~$ y=10
+student@T18:~$ x=20
+student@T18:~$ res=`expr $y=$x`
+student@T18:~$ echo $res
+10=20
+student@T18:~$ b="athira"
+student@T18:~$ c=`expr substr $b 2 4`
+student@T18:~$ echo $c
+thir
+student@T18:~$ b="athira"
+student@T18:~$ c=`expr substr $b 2 5`
+student@T18:~$ echo $c
+thira
+student@T18:~$ p="hello"
+student@T18:~$ q="world"
+student@T18:~$ c=`expr $p \| $q`
+student@T18:~$ echo $c
+hello
+student@T18:~$ a=20`
+> ^C
+student@T18:~$ a=20
+student@T18:~$ b=40
+student@T18:~$ c=`expr $a \< $b`
+student@T18:~$ echo $c
+1
+student@T18:~$ a=20
+student@T18:~$ b=10
+student@T18:~$ c=`expr $a \< $b`
+student@T18:~$ echo $c
+0
+student@T18:~$ c=`expr $a \> $b`
+student@T18:~$ echo $c
+1
+student@T18:~$ a=10
+student@T18:~$ b=100
+student@T18:~$ c=`expr $a \> $b`
+student@T18:~$ echo $c
+0
+student@T18:~$ c=`expr $a \= $b`
+student@T18:~$ echo $c
+0
+student@T18:~$ c=`expr $a \!= $b`
+student@T18:~$ echo $c
+1
+student@T18:~$ 
+

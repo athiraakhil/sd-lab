@@ -1,0 +1,196 @@
+student@T18:~$ cd ajce
+student@T18:~/ajce$ cd lmca
+student@T18:~/ajce/lmca$ ls -l > f6.txt
+student@T18:~/ajce/lmca$ ls -i
+2631834 f1.txt  2639481 f3.txt  2629631 f5.txt
+2629618 f2.txt  2635380 f4.txt  2631328 f6.txt
+student@T18:~/ajce/lmca$ ls -l
+total 24
+-rw-r--r-- 1 student student  122 Feb 25 16:54 f1.txt
+-rw-r--r-- 1 student student   80 Feb 18 17:16 f2.txt
+-rw-r--r-- 1 student student   75 Mar  7 15:20 f3.txt
+-rw-r--r-- 1 student student 2139 Feb 21 20:31 f4.txt
+-rw-r--r-- 1 student student  172 Mar  7 15:32 f5.txt
+-rw-r--r-- 1 student student  333 Mar 14 14:38 f6.txt
+student@T18:~/ajce/lmca$ ls -a f7.txt
+ls: cannot access 'f7.txt': No such file or directory
+student@T18:~/ajce/lmca$ cat f6.txt
+total 20
+-rw-r--r-- 1 student student  122 Feb 25 16:54 f1.txt
+-rw-r--r-- 1 student student   80 Feb 18 17:16 f2.txt
+-rw-r--r-- 1 student student   75 Mar  7 15:20 f3.txt
+-rw-r--r-- 1 student student 2139 Feb 21 20:31 f4.txt
+-rw-r--r-- 1 student student  172 Mar  7 15:32 f5.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:38 f6.txt
+student@T18:~/ajce/lmca$ wc -l < users.txt
+bash: users.txt: No such file or directory
+student@T18:~/ajce/lmca$ wc -l < f4.txt
+16
+student@T18:~/ajce/lmca$ wc -l f4.txt
+16 f4.txt
+student@T18:~/ajce/lmca$ cat f2.txt | more
+Alappuzha
+Trivandrum
+Ernakulam
+Palakkad
+Kozhikode
+Kannur
+Kollam
+Pathanamthitta
+
+student@T18:~/ajce/lmca$ cat f3.txt | head -n7 |tail -n2
+Six
+Seven
+student@T18:~/ajce/lmca$ cat f3.txt | head -n10 |tail -5
+Six
+Seven
+Eight
+Nine
+Ten
+student@T18:~/ajce/lmca$ cat b f4.txt | down.txt
+cat: b: No such file or directory
+down.txt: command not found
+student@T18:~/ajce/lmca$ cat down.txt
+cat: down.txt: No such file or directory
+student@T18:~/ajce/lmca$ cat b f4.txt > down.txt
+cat: b: No such file or directory
+student@T18:~/ajce/lmca$ cat down.txt
+"Temples" redirects here. For the English rock band, see Temples (band). For other uses, see Temple (disambiguation).
+Göbekli Tepe was founded about 11,500 years ago. It is arguably world's oldest temple.
+Temple of Hephaestus, a Doric Greek temple in Athens with the original entrance facing east, 449 BC (western face depicted).
+9th century Borobudur, one of the largest Buddhist structures, located in Central Java, Indonesia.
+Angkor Wat in Cambodia, is the largest Hindu temple in the world.
+
+A temple (from the Latin word templum) is a structure reserved for religious or spiritual rituals and activities such as prayer and sacrifice. It is typically used for such buildings belonging to all faiths where a more specific term such as church, mosque or synagogue is not generally used in English. These include Hinduism, Buddhism, and Jainism among religions with many modern followers, as well as other ancient religions such as Ancient Egyptian religion.
+
+The form and function of temples is thus very variable, though they are often considered by believers to be in s_ sense the "house" of one or more deities. Typically offerings of some sort
+
+
+
+ are made to the deity, and other rituals enacted, and a special group of clergy maintain, and operate the temple. The degree to which the whole population of believers can access the building varies significantly; often parts or even the whole main building can only be accessed by the clergy. Temples typically have a main building and a larger precinct, which may contain many other buildings, or may be a dome shaped structure, much like an igloo.
+
+The word comes from Ancient Rome, where a templum constituted a sacred precinct as defined by a priest, or augur.[1] It has the same root as the word "template", a plan in preparation of the building that was marked out on the ground by the augur. Templa also became associated with the dwelling places of a god or gods. Despite the specific set of meanings associated with the word, it has now become widely used to describe a house of worship for any number of religions and is even used for time periods prior to the Romans___.
+
+student@T18:~/ajce/lmca$ cat b f4.txt 2> down.txt
+"Temples" redirects here. For the English rock band, see Temples (band). For other uses, see Temple (disambiguation).
+Göbekli Tepe was founded about 11,500 years ago. It is arguably world's oldest temple.
+Temple of Hephaestus, a Doric Greek temple in Athens with the original entrance facing east, 449 BC (western face depicted).
+9th century Borobudur, one of the largest Buddhist structures, located in Central Java, Indonesia.
+Angkor Wat in Cambodia, is the largest Hindu temple in the world.
+
+A temple (from the Latin word templum) is a structure reserved for religious or spiritual rituals and activities such as prayer and sacrifice. It is typically used for such buildings belonging to all faiths where a more specific term such as church, mosque or synagogue is not generally used in English. These include Hinduism, Buddhism, and Jainism among religions with many modern followers, as well as other ancient religions such as Ancient Egyptian religion.
+
+The form and function of temples is thus very variable, though they are often considered by believers to be in s_ sense the "house" of one or more deities. Typically offerings of some sort
+
+
+
+ are made to the deity, and other rituals enacted, and a special group of clergy maintain, and operate the temple. The degree to which the whole population of believers can access the building varies significantly; often parts or even the whole main building can only be accessed by the clergy. Temples typically have a main building and a larger precinct, which may contain many other buildings, or may be a dome shaped structure, much like an igloo.
+
+The word comes from Ancient Rome, where a templum constituted a sacred precinct as defined by a priest, or augur.[1] It has the same root as the word "template", a plan in preparation of the building that was marked out on the ground by the augur. Templa also became associated with the dwelling places of a god or gods. Despite the specific set of meanings associated with the word, it has now become widely used to describe a house of worship for any number of religions and is even used for time periods prior to the Romans___.
+
+student@T18:~/ajce/lmca$ cat b f4.txt 2> down.txt
+"Temples" redirects here. For the English rock band, see Temples (band). For other uses, see Temple (disambiguation).
+Göbekli Tepe was founded about 11,500 years ago. It is arguably world's oldest temple.
+Temple of Hephaestus, a Doric Greek temple in Athens with the original entrance facing east, 449 BC (western face depicted).
+9th century Borobudur, one of the largest Buddhist structures, located in Central Java, Indonesia.
+Angkor Wat in Cambodia, is the largest Hindu temple in the world.
+
+A temple (from the Latin word templum) is a structure reserved for religious or spiritual rituals and activities such as prayer and sacrifice. It is typically used for such buildings belonging to all faiths where a more specific term such as church, mosque or synagogue is not generally used in English. These include Hinduism, Buddhism, and Jainism among religions with many modern followers, as well as other ancient religions such as Ancient Egyptian religion.
+
+The form and function of temples is thus very variable, though they are often considered by believers to be in s_ sense the "house" of one or more deities. Typically offerings of some sort
+
+
+
+ are made to the deity, and other rituals enacted, and a special group of clergy maintain, and operate the temple. The degree to which the whole population of believers can access the building varies significantly; often parts or even the whole main building can only be accessed by the clergy. Temples typically have a main building and a larger precinct, which may contain many other buildings, or may be a dome shaped structure, much like an igloo.
+
+The word comes from Ancient Rome, where a templum constituted a sacred precinct as defined by a priest, or augur.[1] It has the same root as the word "template", a plan in preparation of the building that was marked out on the ground by the augur. Templa also became associated with the dwelling places of a god or gods. Despite the specific set of meanings associated with the word, it has now become widely used to describe a house of worship for any number of religions and is even used for time periods prior to the Romans___.
+
+student@T18:~/ajce/lmca$ cat b f4.txt 2> down.txt
+"Temples" redirects here. For the English rock band, see Temples (band). For other uses, see Temple (disambiguation).
+Göbekli Tepe was founded about 11,500 years ago. It is arguably world's oldest temple.
+Temple of Hephaestus, a Doric Greek temple in Athens with the original entrance facing east, 449 BC (western face depicted).
+9th century Borobudur, one of the largest Buddhist structures, located in Central Java, Indonesia.
+Angkor Wat in Cambodia, is the largest Hindu temple in the world.
+
+A temple (from the Latin word templum) is a structure reserved for religious or spiritual rituals and activities such as prayer and sacrifice. It is typically used for such buildings belonging to all faiths where a more specific term such as church, mosque or synagogue is not generally used in English. These include Hinduism, Buddhism, and Jainism among religions with many modern followers, as well as other ancient religions such as Ancient Egyptian religion.
+
+The form and function of temples is thus very variable, though they are often considered by believers to be in s_ sense the "house" of one or more deities. Typically offerings of some sort
+
+
+
+ are made to the deity, and other rituals enacted, and a special group of clergy maintain, and operate the temple. The degree to which the whole population of believers can access the building varies significantly; often parts or even the whole main building can only be accessed by the clergy. Temples typically have a main building and a larger precinct, which may contain many other buildings, or may be a dome shaped structure, much like an igloo.
+
+The word comes from Ancient Rome, where a templum constituted a sacred precinct as defined by a priest, or augur.[1] It has the same root as the word "template", a plan in preparation of the building that was marked out on the ground by the augur. Templa also became associated with the dwelling places of a god or gods. Despite the specific set of meanings associated with the word, it has now become widely used to describe a house of worship for any number of religions and is even used for time periods prior to the Romans___.
+
+student@T18:~/ajce/lmca$ cat down.txt
+cat: b: No such file or directory
+student@T18:~/ajce/lmca$ cat down.txt 2>hn.txt
+cat: b: No such file or directory
+student@T18:~/ajce/lmca$ cat down.txt 2>hn.txt
+cat: b: No such file or directory
+student@T18:~/ajce/lmca$ cat hn.txt
+student@T18:~/ajce/lmca$ cat f2.txt 1 > f10.txt
+cat: 1: No such file or directory
+student@T18:~/ajce/lmca$ cat f2.txt 1>f10.txt
+student@T18:~/ajce/lmca$ cat f10.txt
+Alappuzha
+Trivandrum
+Ernakulam
+Palakkad
+Kozhikode
+Kannur
+Kollam
+Pathanamthitta
+
+student@T18:~/ajce/lmca$ touch myfile.txt
+student@T18:~/ajce/lmca$ chmod 754 myfile.txt
+student@T18:~/ajce/lmca$ chmod u=rwx myfile.txt
+student@T18:~/ajce/lmca$ chmod u=rw myfile.txt
+student@T18:~/ajce/lmca$ chmod u+x myfile.txt
+student@T18:~/ajce/lmca$ ls -l
+total 36
+-rw-r--r-- 1 student student   34 Mar 14 15:00 down.txt
+-rw-r--r-- 1 student student   80 Mar 14 15:04 f10.txt
+-rw-r--r-- 1 student student  122 Feb 25 16:54 f1.txt
+-rw-r--r-- 1 student student   80 Feb 18 17:16 f2.txt
+-rw-r--r-- 1 student student   75 Mar  7 15:20 f3.txt
+-rw-r--r-- 1 student student 2139 Feb 21 20:31 f4.txt
+-rw-r--r-- 1 student student  172 Mar  7 15:32 f5.txt
+-rw-r--r-- 1 student student  333 Mar 14 14:38 f6.txt
+-rw-r--r-- 1 student student    0 Mar 14 15:01 hn.txt
+-rwxr-xr-- 1 student student   70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ ls -l myfile.txt
+-rwxr-xr-- 1 student student 70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ chmod u+x,g+x,o+x myfile.txt
+student@T18:~/ajce/lmca$ ls -l myfile.txt
+-rwxr-xr-x 1 student student 70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ chmod 111 myfile.txt
+student@T18:~/ajce/lmca$ cat myfile.txt
+cat: myfile.txt: Permission denied
+student@T18:~/ajce/lmca$ chmod 411 myfile.txt
+student@T18:~/ajce/lmca$ ls -l myfile.txt
+-r----x--x 1 student student 70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ cat 441 myfile.txt
+cat: 441: No such file or directory
+Athira S
+S4 MCA Regular
+Roll no:17
+Amal Jyothi College of Engineering
+student@T18:~/ajce/lmca$ ls -l myfile.txt
+-r----x--x 1 student student 70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ chmod 441 myfile.txt
+student@T18:~/ajce/lmca$ ls -l myfile.txt
+-r--r----x 1 student student 70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ chmod u+w,g+w myfile.txt
+student@T18:~/ajce/lmca$ ls -l myfile.txt
+-rw-rw---x 1 student student 70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ chmod o+r+w myfile.txt
+student@T18:~/ajce/lmca$ ls -l myfile.txt
+-rw-rw-rwx 1 student student 70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ chmod u=x,g=x myfile.txt
+student@T18:~/ajce/lmca$ ls -l myfile.txt
+---x--xrwx 1 student student 70 Mar 14 15:18 myfile.txt
+student@T18:~/ajce/lmca$ ^C
+student@T18:~/ajce/lmca$ ^C
+student@T18:~/ajce/lmca$ 
+
